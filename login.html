@@ -16,6 +16,15 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		input[id="username"]:invalid {
+			background-color: deepskyblue;
+		}
+		input[id="password"]:invalid {
+			background-color: deepskyblue;
+		}
+		</style>
+
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -62,14 +71,14 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input type="text" class="form-control" placeholder="username" >
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input type="password" class="form-control" placeholder="password" >
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
