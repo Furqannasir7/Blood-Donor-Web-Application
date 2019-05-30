@@ -11,7 +11,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
+<style>
+    input[id="fullname"]:invalid{
+        background-color: deepskyblue;
+    }
+    input[id="email"]:invalid{
+        background-color: deepskyblue;
+    }
+    input[id="phone"]:invalid{
+        background-color: deepskyblue;
+    }
+    input[id="password"]:invalid{
+        background-color: deepskyblue;
+    }
+    input[id="password1"]:invalid{
+        background-color: deepskyblue;
+    }
+    input[id="fullname"]:valid{
+        background-color: lightgreen;
+    }
+    input[id="email"]:valid{
+        background-color: lightgreen;
+    }
+    input[id="phone"]:valid{
+        background-color: lightgreen;
+    }
+    input[id="password"]:valid{
+        background-color: lightgreen;
+    }
+    input[id="password1"]:valid{
+        background-color: lightgreen;
+    }
+</style>
 
 </head>
 
@@ -61,13 +92,13 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <input name="" class="form-control"  placeholder="Full name" type="text" >
+                <input name="fullname" class="form-control" id="fullname" placeholder="Full name" type="text" required pattern="^([a-zA-Z0-9]+|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{1,}|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{3,}\s{1}[a-zA-Z0-9]{1,})$" >
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
-                <input name="" class="form-control"  placeholder="Email address" type="email">
+                <input name="email" class="form-control" id="email" placeholder="Email address" type="email" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
@@ -79,30 +110,20 @@
                     <option value="2">+198</option>
                     <option value="3">+701</option>
                 </select>
-                <input name="" class="form-control" placeholder="Phone number" type="text">
+                <input name="phone" class="form-control" id="phone" placeholder="Phone number" type="text" required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
             </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                </div>
-                <select class="form-control">
-                    <option selected=""> Select job type</option>
-                    <option>Designer</option>
-                    <option>Manager</option>
-                    <option>Accounting</option>
-                </select>
-            </div> <!-- form-group end.// -->
+
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Create password" type="password">
+                <input class="form-control" id="password" placeholder="Create password" type="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$" title="Pasword Must Contain Uppercase or Lowercase alphabets, digits and any sign and minimum length of 7 or max 10">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Repeat password" type="password">
+                <input class="form-control" id="password1" placeholder="Repeat password" type="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$" title="Pasword Must Contain Uppercase or Lowercase alphabets, digits and any sign and minimum length of 7 or max 10">
             </div> <!-- form-group// -->
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
