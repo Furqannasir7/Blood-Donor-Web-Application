@@ -23,6 +23,12 @@
 		input[id="password"]:invalid {
 			background-color: deepskyblue;
 		}
+		input[id="username"]:valid {
+			background-color: lightgreen;
+		}
+		input[id="password"]:valid {
+			background-color: lightgreen;
+		}
 		</style>
 
 </head>
@@ -71,14 +77,14 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username" >
+						<input type="text" class="form-control" id="username" placeholder="username" required pattern="^(?!.*__.*)(?!.*\.\..*)[a-z0-9_.]+$" >
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password" >
+						<input type="password" class="form-control" id="password" placeholder="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{8,10}$" title="Pasword Must Contain Uppercase or Lowercase alphabets, digits and any sign and minimum length of 7 or max 10" >
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
