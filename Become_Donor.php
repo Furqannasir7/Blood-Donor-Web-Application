@@ -47,7 +47,7 @@ if(isset($_POST['submit']))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blood Bank</title>
+    <title>Blood Bank Register</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
